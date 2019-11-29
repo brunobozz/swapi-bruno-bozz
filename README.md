@@ -1,6 +1,18 @@
 # SwapiBrunoBozz
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.3.
+This project use the Star Wars API to show details of the movies, characters and planets from franchise.
+
+Works fine en all sizes on Desktop or Mobile.
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) 
+
+Use the correct versions frameworks to run the project.
+Angular CLI version 8.1.3.
+Node version: 12.13.1
+
+## Dependencies
+
+This projec use ngx-bootstrap and Font Awesome libraryes. Run `npm i` to install the depencies.
 
 ## Development server
 
