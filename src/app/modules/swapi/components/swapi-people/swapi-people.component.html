@@ -1,40 +1,43 @@
 <div class="m-3">
   <h4>People</h4>
   <p>List of all characters with pagination</p>
-  <table class="table table-bordered">
-    <thead class="table-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Gender</th>
-        <th scope="col">Homeworld</th>
-        <th scope="col">Height</th>
-        <th scope="col">Specie</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let people of swapiPeople.results">
-        <th scope="row">{{ people.url }}</th>
-        <td>{{ people.name }}</td>
-        <td>
-          <i
-            class="fas"
-            [ngClass]="{
-              'fa-mars': people.gender === 'male',
-              'fa-venus': people.gender === 'female',
-              'fa-genderless': people.gender === 'none' || people.gender === 'n/a',
-              'fa-venus-mars': people.gender === 'hermaphrodite'
-            }"
-          ></i>
-          {{ people.gender }}
-        </td>
-        <td>{{ people.homeworld.name }}</td>
-        <td>{{ people.height }} cm</td>
-        <td>{{ people.species.name }}</td>
-      </tr>
-    </tbody>
-  </table>
-  <div>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Homeworld</th>
+          <th scope="col">Height</th>
+          <th scope="col">Specie</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let people of swapiPeople.results">
+          <th scope="row">{{ people.url }}</th>
+          <td>{{ people.name }}</td>
+          <td>
+            <i
+              class="fas"
+              [ngClass]="{
+                'fa-mars': people.gender === 'male',
+                'fa-venus': people.gender === 'female',
+                'fa-genderless':
+                  people.gender === 'none' || people.gender === 'n/a',
+                'fa-venus-mars': people.gender === 'hermaphrodite'
+              }"
+            ></i>
+            {{ people.gender }}
+          </td>
+          <td>{{ people.homeworld.name }}</td>
+          <td>{{ people.height }} cm</td>
+          <td>{{ people.species.name }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="mb-2 d-inline-block w-100">
     <button
       class="btn btn-outline-primary"
       *ngIf="swapiPeople.previous"

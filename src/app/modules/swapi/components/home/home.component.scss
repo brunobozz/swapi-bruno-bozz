@@ -1,6 +1,45 @@
-.home-logo{
-    display: block;
-    margin: 50px auto;
-    width: 400px;
-    max-width: 100%;
+.home-logo {
+  display: block;
+  margin: 50px auto;
+  width: 400px;
+  max-width: 60%;
+  position: absolute;
+  z-index: 100;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.cont-home {
+  height: calc(100vh - 56px);
+  width: 100%;
+
+  .home-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-image: url(../../../../../assets/background-space-01.jpg);
+  }
+  @media only screen and (orientation: portrait) {
+    .home-background {
+      background-image: url(../../../../../assets/background-space-01_mobile.jpg);
+    }
+  }
+  .home-silhouette {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../../../../../assets/silhouette-home.svg);
+  }
+  @media only screen and (orientation: portrait) {
+    .home-silhouette {
+      background-image: url(../../../../../assets/silhouette-home_mobile.svg);
+    }
+  }
 }
