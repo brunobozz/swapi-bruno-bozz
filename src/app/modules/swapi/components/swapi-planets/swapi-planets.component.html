@@ -1,0 +1,12 @@
+<div class="m-3">
+  <h4>Planets</h4>
+  <p>Click on the planet for more details.</p>
+  
+  <button
+    class="btn btn-lg btn-warning m-2"
+    *ngFor="let planet of allPlanets"
+    (click)="showPlanet(planet.url)"
+  >
+    {{ planet.name }}
+  </button>
+</div>

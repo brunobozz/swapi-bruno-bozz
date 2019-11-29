@@ -1,0 +1,19 @@
+<div class="m-4">
+  <div class="movies-area">
+    <div class="card" style="width: 18rem;" *ngFor="let movie of allMovies">
+      <div
+        class="poster"
+        [style.backgroundImage]="
+          'url(./assets/movies/cover-' + movie.episode_id + '.jpg)'
+        "
+      ></div>
+      <div class="card-body">
+        <h5 class="card-title">{{ movie.title }}</h5>
+        <p class="card-text">{{ movie.opening_crawl | slice: 0:180 }}...</p>
+        <span class="btn btn-primary" (click)="showMovie(movie.url)"
+          >Show More</span
+        >
+      </div>
+    </div>
+  </div>
+</div>

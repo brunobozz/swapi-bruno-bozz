@@ -1,0 +1,20 @@
+.navbar-brand {
+  img {
+    height: 30px;
+    cursor: pointer;
+    &:hover {
+      filter: grayscale(100%);
+    }
+  }
+}
+
+.navbar-menu {
+  span {
+    margin: 0 10px;
+    cursor: pointer;
+    color: #fff;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

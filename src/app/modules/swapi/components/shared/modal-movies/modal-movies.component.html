@@ -1,0 +1,32 @@
+<div class="modal-header bg-dark">
+  <h5 class="modal-title pull-left text-light">{{ title }}</h5>
+  <button
+    type="button"
+    class="close pull-right"
+    aria-label="Close"
+    (click)="bsModalRef.hide()"
+  >
+    <span aria-hidden="true" class="text-light">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <p> <i class="fas fa-quote-left"></i> <b> Description:</b> {{ opening_crawl }}</p>
+  <p> <i class="fas fa-user"></i> <b> Director:</b> {{ director }}</p>
+  <p> <i class="fas fa-user-tie"></i> <b> Producer:</b> {{ producer }}</p>
+  <p> <i class="fas fa-calendar-alt"></i> <b> Release Date:</b> {{ release_date | date: "fullDate" }}</p>
+  
+  <p> <i class="fas fa-users"></i> <b> Characters:</b></p>
+  <ul><li *ngFor="let char of moviePeople" >{{ char.name }}</li></ul>
+
+  <p> <i class="fas fa-globe-europe"></i> <b> Planets:</b></p>
+  <ul><li *ngFor="let plan of moviePlanets">{{ plan.name }}</li></ul>
+
+  <p> <i class="fas fa-fighter-jet"></i> <b> Starships:</b></p>
+  <ul><li *ngFor="let star of movieStarships">{{ star.name }}</li></ul>
+
+  <p> <i class="fas fa-car-side"></i> <b> Vehicles:</b></p>
+  <ul><li *ngFor="let vehi of movieVehicles">{{ vehi.name }}</li></ul>
+
+  <p> <i class="fas fa-otter"></i> <b> Species:</b></p>
+  <ul><li *ngFor="let spec of movieSpecies">{{ spec.name }}</li></ul>
+</div>

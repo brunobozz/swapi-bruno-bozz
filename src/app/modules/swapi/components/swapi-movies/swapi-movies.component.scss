@@ -1,0 +1,17 @@
+.movies-area{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .card{
+        margin: 20px;
+    }
+}
+
+.poster{
+    height: 400px;
+    width: 100%;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

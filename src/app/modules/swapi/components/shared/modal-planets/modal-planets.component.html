@@ -1,0 +1,31 @@
+<div class="modal-header bg-dark">
+  <h5 class="modal-title pull-left text-light">{{ name }}</h5>
+  <button
+    type="button"
+    class="close pull-right"
+    aria-label="Close"
+    (click)="bsModalRef.hide()"
+  >
+    <span aria-hidden="true" class="text-light">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <p><b>Rotation Period:</b> {{ rotation_period }}</p>
+  <p><b>Orbital Period: </b> {{ orbital_period }}</p>
+  <p><b>Diameter: </b> {{ diameter }}</p>
+  <p><b>Climate: </b> {{ climate }}</p>
+  <p><b>Gravity: </b> {{ gravity }}</p>
+  <p><b>Terrain: </b> {{ terrain }}</p>
+  <p><b>Surface Water: </b> {{ surface_water }}</p>
+  <p><b>Population: </b> {{ population }}</p>
+  <p><b>Residents: </b></p>
+  <ul>
+    <li *ngFor="let item of planetResidents">{{ item.name }}</li>
+    <span *ngIf="planetResidents == ''">None</span>
+  </ul>
+  <p><b>Movies: </b></p>
+  <ul>
+    <li *ngFor="let film of planetFilms">{{ film.title }}</li>
+    <span *ngIf="planetFilms == ''">None</span>
+  </ul>
+</div>
