@@ -1,8 +1,8 @@
 # SwapiBrunoBozz
 
-This project use the Star Wars API to show details of the movies, characters and planets from franchise.
+This project use the [Star Wars API](https://swapi.co/) to show details of the movies, characters and planets from franchise.
 
-Works fine en all sizes on Desktop or Mobile.
+Works fine in all sizes on Desktop or Mobile.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) 
 
